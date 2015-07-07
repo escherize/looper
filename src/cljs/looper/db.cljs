@@ -1,4 +1,4 @@
 (ns looper.db)
 
 (def default-db
-  {:name "re-frame"})
+  {:content "the content"})

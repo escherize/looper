@@ -14,7 +14,11 @@
   :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src/cljs"]
 
-                        :figwheel {:on-jsload "looper.core/mount-root"}
+                        :figwheel {:on-jsload "looper.core/mount-root"
+                                   :http-server-root "public"
+                                   :server-port 3449
+                                   :nrepl-port 7002
+                                   :css-dirs ["resources/public/css"]}
 
                         :compiler {:main looper.core
                                    :output-to "resources/public/js/compiled/app.js"
@@ -25,6 +29,7 @@
                        {:id "min"
                         :source-paths ["src/cljs"]
                         :compiler {:main looper.core
+                                   :externs ["resources/public/js/src-min-noconflict/ace.js"]
                                    :output-to "resources/public/js/compiled/app.js"
                                    :optimizations :advanced
                                    :pretty-print false}}]})
