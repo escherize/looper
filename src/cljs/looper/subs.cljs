@@ -6,3 +6,9 @@
  :content
  (fn [db]
    (reaction (:content @db))))
+
+
+(re-frame/register-sub
+ :graph-data
+ (fn [db]
+   (reaction (:graph-data @db))))

@@ -1,4 +1,4 @@
 (ns looper.db)
 
 (def default-db
-  {:content "the content"})
+  {:content "[A B]"})
