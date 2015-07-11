@@ -1,4 +1,23 @@
-#editor {
-  width: 800px;
-  height: 400px;
+.link {
+
 }
+
+.node {
+  cursor: move;
+}
+
+.label{
+  font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+  font-size: 12px;
+  fill: #444;
+  text-anchor: middle;
+  cursor: move;
+}
+
+#editor{
+  margin-bottom: -200px;
+}
+
+/* body{ */
+/*   background-color: rgb(39, 40, 34); */
+/* } */
