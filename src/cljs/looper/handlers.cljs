@@ -40,8 +40,8 @@
        (do
          (js/clear)
          (doseq [n nodes]
-           (do (.log js/console (clj->js {:id n :width "40" :height "60"}))
-               (js/add_node (clj->js {:id n :width "40" :height "60"}))))
+           (do (.log js/console (clj->js {:id n}))
+               (js/add_node (clj->js {:id n}))))
          (doseq [e edges]
            (let [[s t] e
                  edge {:source {:id s} :target {:id t}}]

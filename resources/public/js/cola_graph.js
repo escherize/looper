@@ -1,5 +1,5 @@
-var width = 300;
-var height = 300;
+var width = screen.width / 1.5; //400;
+var height = screen.height / 1.5;//300;
 
 var color = d3.scale.category20();
 
@@ -20,7 +20,7 @@ force = cola.d3adaptor()
 
 var svg = d3.select("body")
         .append("svg")
-        .attr("position", "absolute")
+        .style("background-color", "#272822")
         .attr("top", "0")
         .attr("left", "0")
         .attr("viewBox", "0 0 " + width + " " + height )

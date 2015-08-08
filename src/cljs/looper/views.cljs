@@ -9,11 +9,19 @@
         graph-data (subscribe [:graph-data])]
     (fn []
       [:div
-       [:input {:type :button :value "db?" :on-click (fn [] (dispatch [:db]))}]
-       ;;[:code (pr-str @parsed-data)]
-       [:span [:code (pr-str @graph-data)]]
-       [:div#editor {:style {:height "200px"}}
-        "[4 5] [6 4 3 2 5 1 2]"]])))
+       [:h1 "working title"]
+       [:span "Make the graph in the thing. pfft."]
+
+       [:div#editor {:style {:position "fixed"
+                             :min-height "400px"
+                             :width "400px"
+                             :margin "15px"
+                             :border "rgba(255, 255, 255, 0.5) 1px solid"
+                             ;:border-radius "5px"
+                             :background-color "rgba(0, 0, 0, 0.0)"
+                             }}
+        "[4 5]
+[6 4 3 2 5 1 2]"]])))
 
 (defn safe-read [s on-success]
   (try (let [data (reader/read-string s)]
